@@ -1,4 +1,4 @@
-# SumfinBlue - bluefin
+# SumfinBlue - [bluefin](https://github.com/ublue-os/bluefin)
 
 **This image is considered Beta** 
 
