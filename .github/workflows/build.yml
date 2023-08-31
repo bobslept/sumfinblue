@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_flavor: [main, nokmods, nvidia]
+        image_flavor: [main]
         base_name: [bluefin, bluefin-dx]
         major_version: [38, 39]
         include:
