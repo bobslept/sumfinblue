@@ -106,7 +106,7 @@ RUN rm -rf /tmp/* /var/*
 RUN ostree container commit
 
 # Image for Framework laptops
-FROM bluefin AS bluefin-framework
+FROM ${TARGET_BASE} AS ${TARGET_BASE}-framework
 
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 ARG PACKAGE_LIST="bluefin-framework"
