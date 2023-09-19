@@ -31,8 +31,7 @@
 				"wireguard-tools",
 				"xprop",
 				"yaru-theme",
-				"zsh",
-				"google-noto-sans-cjk-fonts"
+				"zsh"
 			],
 			"bluefin-dx": [
 				"adobe-source-code-pro-fonts",
@@ -46,7 +45,12 @@
 				"cockpit-storaged",
 				"cockpit-system",
 				"code",
+				"containerd.io",
 				"dbus-x11",
+				"docker-ce",
+				"docker-ce-cli",
+				"docker-buildx-plugin",
+				"docker-compose-plugin",
 				"edk2-ovmf",
 				"edk2-ovmf",
 				"genisoimage",
@@ -90,8 +94,7 @@
 				"firefox-langpacks",
 				"firefox",
 				"gnome-software-rpm-ostree",
-				"gnome-tour",
-				"google-noto-sans-cjk-vf-fonts"
+				"gnome-tour"
 			],
 			"bluefin-dx": [],
 			"bluefin-framework": [
