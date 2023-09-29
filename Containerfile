@@ -39,6 +39,9 @@ RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases
   install -c -m 0755 /tmp/starship /usr/bin && \
   echo 'eval "$(starship init bash)"' >> /etc/bashrc
 
+# use 6.4.15 kernel test
+RUN rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-775674d7f1
+
 RUN /tmp/build.sh && \
     /tmp/image-info.sh && \
     pip install --prefix=/usr yafti && \
