@@ -26,6 +26,8 @@ COPY image-info.sh /tmp/image-info.sh
 RUN if grep -qv "39" <<< "${FEDORA_MAJOR_VERSION}"; then \
     wget https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora-"${FEDORA_MAJOR_VERSION}"/kylegospo-gnome-vrr-fedora-"${FEDORA_MAJOR_VERSION}".repo -O /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \
     if [ ${FEDORA_MAJOR_VERSION} -lt 39 ]; then \
+        # use 6.4.15 kernel test
+        rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-775674d7f1 && \
         rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter mutter-common gnome-control-center gnome-control-center-filesystem xorg-x11-server-Xwayland \
     ; else \
         rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter mutter-common gnome-control-center gnome-control-center-filesystem \
@@ -38,9 +40,6 @@ RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases
   tar -xzf /tmp/starship.tar.gz -C /tmp && \
   install -c -m 0755 /tmp/starship /usr/bin && \
   echo 'eval "$(starship init bash)"' >> /etc/bashrc
-
-# use 6.4.15 kernel test
-RUN rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-775674d7f1
 
 RUN /tmp/build.sh && \
     /tmp/image-info.sh && \
