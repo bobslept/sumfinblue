@@ -11,10 +11,15 @@ if [[ -f $VER_FILE && $VER = $VER_RAN ]]; then
   exit 0
 fi
 
+# Setup Flathub
+flatpak remote-add --if-not-exists --user flathub /etc/flatpak/remotes.d/flathub.flatpakrepo
+
 # Lists of flatpaks
 FLATPAK_LIST=$(flatpak list --columns=application)
 INSTALL_LIST=$(cat /etc/flatpak/user/install)
 REMOVE_LIST=$(cat /etc/flatpak/user/remove)
+
+notify-send "Flatpak installer" "Currently installing user flatpaks" --app-name="Flatpak installer" -u NORMAL
 
 # Install flatpaks in list
 if [[ -n $INSTALL_LIST ]]; then
@@ -24,6 +29,9 @@ if [[ -n $INSTALL_LIST ]]; then
     fi
   done
 fi
+
+notify-send "Flatpak installer" "Finished installing user flatpaks" --app-name="Flatpak installer" -u NORMAL
+
 
 # Remove flatpaks in list
 if [[ -n $REMOVE_LIST ]]; then
