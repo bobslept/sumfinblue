@@ -9,12 +9,14 @@ LABEL com.github.containers.toolbox="true" \
 COPY ./toolboxes/packages.wolfi /toolbox-packages
 
 # Update image & add dependencies
-RUN apk update && \
+RUN echo https://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories && \
+    apk update && \
     apk upgrade
 
 # Add Distrobox specific packages
 RUN apk add sudo-rs \
         procps \
+        shadow \
         bash \
         bzip2 \
         curl \
