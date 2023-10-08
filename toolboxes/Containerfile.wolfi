@@ -13,10 +13,8 @@ RUN apk update && \
     apk upgrade
 
 # Add Distrobox specific packages
-# Remove procps due to conflict with coreutils
-RUN apk del procps && \
-    apk add sudo-rs \
-        coreutils \
+RUN apk add sudo-rs \
+        procps \
         bash \
         bzip2 \
         curl \
