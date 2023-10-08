@@ -14,7 +14,7 @@ RUN apk update && \
 
 # Add Distrobox specific packages
 RUN apk add sudo-rs \
-        coreutils \
+        procps \
         bash \
         bzip2 \
         curl \
