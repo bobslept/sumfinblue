@@ -27,7 +27,7 @@ RUN apk add sudo-rs \
         iputils \
         keyutils \
         libcap \
-        usermod \
+        shadow \
         ncurses \
         ncurses-terminfo \
         net-tools \
