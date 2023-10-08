@@ -35,6 +35,9 @@ RUN apk add sudo-rs \
         rsync \
         tcpdump \
         tree \
+        mount \
+        gnupg \
+        vulkan-loader \
         umount \
         util-linux \
         util-linux-misc \
