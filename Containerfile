@@ -78,8 +78,8 @@ RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/bling/repo/fedora-$(rp
         systemctl disable ublue-update.timer \
     ; fi && \
     systemctl enable ublue-system-setup.service && \
-    systemctl enable ublue-system-flatpak-manager.service && \
-    systemctl --global enable ublue-user-flatpak-manager.service && \
+    systemctl disable ublue-system-flatpak-manager.service && \
+    systemctl --global disable ublue-user-flatpak-manager.service && \
     systemctl --global enable ublue-user-setup.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     fc-cache -f /usr/share/fonts/inter && \
