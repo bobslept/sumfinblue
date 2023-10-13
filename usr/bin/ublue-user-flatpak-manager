@@ -19,19 +19,17 @@ FLATPAK_LIST=$(flatpak list --columns=application)
 INSTALL_LIST=$(cat /etc/flatpak/user/install)
 REMOVE_LIST=$(cat /etc/flatpak/user/remove)
 
-notify-send "Flatpak installer" "Currently installing user flatpaks" --app-name="Flatpak installer" -u NORMAL
-
 # Install flatpaks in list
 if [[ -n $INSTALL_LIST ]]; then
   for flatpak in $INSTALL_LIST; do
     if grep -qvz $flatpak <<< $FLATPAK_LIST; then
-      flatpak install --user --noninteractive flathub $flatpak
+      if ! flatpak install --user --noninteractive flathub $flatpak; then
+        # exit on error
+        exit 1
+      fi
     fi
   done
 fi
-
-notify-send "Flatpak installer" "Finished installing user flatpaks" --app-name="Flatpak installer" -u NORMAL
-
 
 # Remove flatpaks in list
 if [[ -n $REMOVE_LIST ]]; then
@@ -41,5 +39,7 @@ if [[ -n $REMOVE_LIST ]]; then
     fi
   done
 fi
+
+notify-send "Flatpak installer" "Finished installing user flatpaks" --app-name="Flatpak installer" -u NORMAL
 
 echo $VER > $VER_FILE
