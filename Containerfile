@@ -102,7 +102,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/bling/repo/fedora-$(rp
 FROM bluefin AS bluefin-dx
 
 ARG IMAGE_NAME="${IMAGE_NAME}"
-ARG IMAGE_VENDOR="ublue-os"
+ARG IMAGE_VENDOR="bobslept"
 ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME}"
 ARG IMAGE_FLAVOR="${IMAGE_FLAVOR}"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
