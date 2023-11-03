@@ -2,9 +2,9 @@
 
 **This image is considered Beta** 
 
-[![Bluefin Build](https://github.com/ublue-os/bluefin/actions/workflows/build.yml/badge.svg)](https://github.com/bobslept/sumfinblue/actions/workflows/build.yml)
+[![Bluefin Build](https://github.com/bobslept/sumfinblue/actions/workflows/build.yml/badge.svg)](https://github.com/bobslept/sumfinblue/actions/workflows/build.yml)
 
-[![Ubuntu Toolbox](https://github.com/ublue-os/bluefin/actions/workflows/build-ubuntu-toolbox.yml/badge.svg)](https://github.com/bobslept/sumfinblue/actions/workflows/build-ubuntu-toolbox.yml)
+[![Ubuntu Toolbox](https://github.com/bobslept/sumfinblue/actions/workflows/build-ubuntu-toolbox.yml/badge.svg)](https://github.com/bobslept/sumfinblue/actions/workflows/build-ubuntu-toolbox.yml)
 
 [![Fedora Toolbox](https://github.com/bobslept/sumfinblue/actions/workflows/build-fedora-toolbox.yml/badge.svg)](https://github.com/bobslept/sumfinblue/actions/workflows/build-fedora-toolbox.yml)
 ## [Download the test ISO](https://github.com/ublue-os/bluefin/releases/)
