@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -oue pipefail
-
+# add comment
 IMAGE_INFO="/usr/share/ublue-os/image-info.json"
 IMAGE_REF="ostree-image-signed:docker://ghcr.io/$IMAGE_VENDOR/$IMAGE_NAME"
 
