@@ -79,6 +79,7 @@
 				"google-go-mono-fonts",
 				"ibm-plex-mono-fonts",
 				"incus",
+				"incus-agent",
 				"indent",
 				"intltool",
 				"iotop",
@@ -93,6 +94,7 @@
 				"patchutils",
 				"p7zip-plugins",
 				"p7zip",
+				"podman-compose",
 				"podman-plugins",
 				"podman-tui",
 				"podmansh",
@@ -115,7 +117,8 @@
 				"systemtap",
 				"ubuntu-nerd-fonts",
 				"ubuntumono-nerd-fonts",
-				"virt-manager"
+				"virt-manager",
+				"virt-viewer"
 			]
 		},
 		"exclude": {
