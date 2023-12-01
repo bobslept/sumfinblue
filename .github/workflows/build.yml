@@ -6,12 +6,14 @@ on:
     branches:
       - main
     paths-ignore:
+      - 'toolboxes/**'
       - '**.md'
       - '**.txt'
   pull_request:
     branches:
       - main
     paths-ignore:
+      - 'toolboxes/**'
       - '**.md'
       - '**.txt'
   workflow_dispatch:

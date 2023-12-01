@@ -5,15 +5,13 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
+    paths:
+      - 'toolboxes/**'
   pull_request:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
+    paths:
+      - 'toolboxes/**'
   workflow_dispatch:
 env:
     IMAGE_NAME: fedora-toolbox
