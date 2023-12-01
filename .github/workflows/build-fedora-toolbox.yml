@@ -6,12 +6,12 @@ on:
     branches:
       - main
     paths:
-      - 'toolboxes/**'
+      - 'toolboxes/**.fedora'
   pull_request:
     branches:
       - main
     paths:
-      - 'toolboxes/**'
+      - 'toolboxes/**.fedora'
   workflow_dispatch:
 env:
     IMAGE_NAME: fedora-toolbox

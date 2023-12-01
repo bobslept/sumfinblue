@@ -6,12 +6,12 @@ on:
     branches:
       - main
     paths:
-      - 'toolboxes/**'
+      - 'toolboxes/**.ubuntu'
   pull_request:
     branches:
       - main
     paths:
-      - 'toolboxes/**'
+      - 'toolboxes/**.ubuntu'
   workflow_dispatch:
 env:
     IMAGE_NAME: ubuntu-toolbox
