@@ -2,9 +2,17 @@
 	"all": {
 		"include": {
 			"all": [
+				"adcli",
+				"adw-gtk3-theme",
 				"bash-color-prompt",
 				"bcache-tools",
+				"bluefin-schemas",
+				"borgbackup",
 				"bootc",
+				"bluefin-cli-logos",
+				"bluefin-fastfetch",
+				"bluefin-faces",
+				"ddcutil",
 				"evtest",
 				"epson-inkjet-printer-escpr",
 				"epson-inkjet-printer-escpr2",
@@ -12,25 +20,33 @@
 				"fish",
 				"firewall-config",
 				"foo2zjs",
+				"fuse-encfs",
 				"gcc",
+				"git-credential-libsecret",
 				"glow",
 				"gum",
 				"hplip",
 				"krb5-workstation",
+				"ibus-mozc",
 				"ifuse",
 				"input-leap",
 				"input-remapper",
+				"jetbrains-mono-fonts-all",
 				"libimobiledevice",
 				"libxcrypt-compat",
+				"libsss_autofs",
 				"lm_sensors",
 				"make",
 				"mesa-libGLU",
+				"mozc",
 				"nerd-fonts",
+				"oddjob-mkhomedir",
 				"opendyslexic-fonts",
-				"playerctl",
 				"printer-driver-brlaser",
 				"pulseaudio-utils",
+				"powertop",
 				"python3-pip",
+				"python3-pygit2",
 				"rclone",
 				"restic",
 				"samba-dcerpc",
@@ -38,18 +54,27 @@
 				"samba-winbind-clients",
 				"samba-winbind-modules",
 				"samba",
+				"setools-console",
 				"solaar",
+				"sssd-ad",
+				"sssd-krb5",
+				"sssd-nfs-idmap",
 				"stress-ng",
 				"tailscale",
 				"tmux",
+				"topgrade",
+				"ublue-fastfetch",
+				"ublue-motd",
 				"usbmuxd",
+				"ublue-brew",
+				"ublue-bling",
 				"wireguard-tools",
 				"xprop",
 				"wl-clipboard",
 				"zsh"
 			],
 			"silverblue": [
-				"simple-scan",
+				"cryfs",
 				"gnome-shell-extension-appindicator",
 				"gnome-shell-extension-blur-my-shell",
 				"gnome-shell-extension-caffeine",
@@ -58,34 +83,28 @@
 				"gnome-shell-extension-logo-menu",
 				"gnome-shell-extension-search-light",
 				"gnome-shell-extension-tailscale-gnome-qs",
-				"libgda-sqlite",
 				"libgda",
+				"libgda-sqlite",
 				"libratbag-ratbagd",
 				"nautilus-gsconnect",
 				"nautilus-open-any-terminal",
 				"openssh-askpass",
+				"simple-scan",
 				"yaru-theme",
 				"zenity"
-			],
-			"kinoite": [
-				"skanpage",
-				"libadwaita-qt5",
-				"libadwaita-qt6",
-				"kde-runtime-docs",
-				"kdenetwork-filesharing",
-				"kdeplasma-addons",
-				"kdialog",
-				"plasma-wallpapers-dynamic"
+				
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
 				"android-tools",
+				"bcc",
 				"bpftop",
+				"bpftrace",
 				"cascadia-code-fonts",
+				"cockpit-bridge",
 				"cockpit-machines",
 				"cockpit-networkmanager",
 				"cockpit-ostree",
-				"cockpit-pcp",
 				"cockpit-podman",
 				"cockpit-selinux",
 				"cockpit-storaged",
@@ -107,20 +126,23 @@
 				"incus",
 				"incus-agent",
 				"iotop",
-				"jetbrains-mono-fonts-all",
 				"kcli",
 				"libvirt",
+				"libvirt-nss",
 				"lxc",
-				"lxd-agent",
-				"lxd",
 				"mozilla-fira-mono-fonts",
+				"nicstat",
+				"numactl",
+				"osbuild-selinux",
 				"p7zip-plugins",
 				"p7zip",
+				"podman-bootc",
 				"podman-compose",
+				"podman-machine",
 				"podman-tui",
 				"podmansh",
 				"powerline-fonts",
-				"powertop",
+				"python3-ramalama",
 				"qemu-char-spice",
 				"qemu-device-display-virtio-gpu",
 				"qemu-device-display-virtio-vga",
@@ -133,11 +155,15 @@
 				"rocm-hip",
 				"rocm-opencl",
 				"rocm-smi",
+				"sysprof",
+				"tiptop",
+				"trace-cmd",
 				"ubuntu-family-fonts",
 				"udica",
 				"umoci",
 				"virt-manager",
 				"virt-viewer",
+				"virt-v2v",
 				"ydotool"
 			]
 		},
@@ -145,35 +171,14 @@
 			"all": [
 				"firefox-langpacks",
 				"firefox",
-				"podman-docker",
-				"ublue-os-update-services"
+				"podman-docker"
 			],
 			"silverblue": [
 				"gnome-extensions-app",
+				"gnome-shell-extension-background-logo",
 				"gnome-software-rpm-ostree",
-				"gnome-terminal-nautilus",
-				"gnome-tour"
+				"gnome-terminal-nautilus"
 			],
-			"kinoite": [
-				"krfb",
-				"krfb-libs",
-				"plasma-welcome"
-			],
-			"dx": []
-		}
-	},
-	"39": {
-		"include": {
-			"all": [],
-			"silverblue": [],
-			"dx": [
-				"distrobuilder",
-				"podman-plugins"
-			]
-		},
-		"exclude": {
-			"all": [],
-			"silverblue": [],
 			"dx": []
 		}
 	},
@@ -183,13 +188,28 @@
 				"ptyxis"
 			],
 			"silverblue": [],
-			"dx": []
+			"dx": [
+				"lxd-agent",
+				"lxd"
+			]
 		},
 		"exclude": {
-			"all":	[],
+			"all": [],
+			"silverblue": [],
+			"dx": []
+		}
+	},
+	"41": {
+		"include": {
+			"all": [
+				"google-noto-fonts-all"
+			],
+			"silverblue": []
+		},
+		"exclude": {
+			"all": [],
 			"silverblue": [],
 			"dx": []
 		}
 	}
-
 }
